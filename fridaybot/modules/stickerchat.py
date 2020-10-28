@@ -134,8 +134,7 @@ if 1 == 1:
             elif reply.fwd_from.from_name:
                 username = reply.fwd_from.from_name
             elif reply.forward.sender:
-                username = telethon.utils.get_display_name(
-                    reply.forward.sender)
+                username = telethon.utils.get_display_name(reply.forward.sender)
             elif reply.forward.chat:
                 username = telethon.utils.get_display_name(reply.forward.chat)
 

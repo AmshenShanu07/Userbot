@@ -319,8 +319,7 @@ async def checker(e):
                             piecount = piecount + 1
                         outandroid = outandroid + 2
                         data.append(
-                            "<b>Android Version</b> : " +
-                            str(outandroid) + "<br/>"
+                            "<b>Android Version</b> : " + str(outandroid) + "<br/>"
                         )
                         # bot.reply_to(message,'Region : {}\nLatest Version : {}\nAndroid Version : {}\nNumber of Pie Testing Regions : {}'.format(region,latestVersion[:16],str(outandroid),piecount))
                     elif latestVersion[9] == "B" or latestVersion[10] == "B":
@@ -328,27 +327,23 @@ async def checker(e):
                             piecount = piecount + 1
                         outandroid = outandroid + 1
                         data.append(
-                            "<b>Android Version</b> : " +
-                            str(outandroid) + "<br/>"
+                            "<b>Android Version</b> : " + str(outandroid) + "<br/>"
                         )
                         # bot.reply_to(message,'Region : {}\nLatest Version : {}\nAndroid Version : {}\nNumber of Pie Testing Regions : {}'.format(region,latestVersion[:16],str(outandroid+1),piecount))
                     else:
                         if outandroid == 9:
                             piecount = piecount + 1
                         data.append(
-                            "<b>Android Version</b> : " +
-                            str(outandroid) + "<br/>"
+                            "<b>Android Version</b> : " + str(outandroid) + "<br/>"
                         )
                     # bot.reply_to(message,'Region : {}\nLatest Version : {}\nAndroid Version : {}\nNumber of Pie Testing Regions : {}'.format(region,latestVersion[:16],str(outandroid),piecount))
                     # print("\nAndroid Version : " + str(outandroid)+"\n")
                 # bot.reply_to(message,'Region : {}\nLatest Version : {}'.format(region,latestVersion[:16]))
-                data.append(
-                    "--------------------------------------------------")
+                data.append("--------------------------------------------------")
             except IndexError:
                 gc.collect()
             outandroid = temp
-        data.append("<br/><b>Number of Pie Tests</b> : " +
-                    str(piecount) + "<br/>")
+        data.append("<br/><b>Number of Pie Tests</b> : " + str(piecount) + "<br/>")
         data = str(data)
         data = data.replace("['", "")
         data = data.replace(",", "")
@@ -427,8 +422,7 @@ async def checker(e):
                             piecount = piecount + 1
                         outandroid = outandroid + 2
                         data.append(
-                            "<b>Android Version</b> : " +
-                            str(outandroid) + "<br/>"
+                            "<b>Android Version</b> : " + str(outandroid) + "<br/>"
                         )
                         # bot.reply_to(message,'Region : {}\nLatest Version : {}\nAndroid Version : {}\nNumber of Pie Testing Regions : {}'.format(region,latestVersion[:16],str(outandroid),piecount))
                     elif latestVersion[9] == "B" or latestVersion[10] == "B":
@@ -436,27 +430,23 @@ async def checker(e):
                             piecount = piecount + 1
                         outandroid = outandroid + 1
                         data.append(
-                            "<b>Android Version</b> : " +
-                            str(outandroid) + "<br/>"
+                            "<b>Android Version</b> : " + str(outandroid) + "<br/>"
                         )
                         # bot.reply_to(message,'Region : {}\nLatest Version : {}\nAndroid Version : {}\nNumber of Pie Testing Regions : {}'.format(region,latestVersion[:16],str(outandroid+1),piecount))
                     else:
                         if outandroid == 9:
                             piecount = piecount + 1
                         data.append(
-                            "<b>Android Version</b> : " +
-                            str(outandroid) + "<br/>"
+                            "<b>Android Version</b> : " + str(outandroid) + "<br/>"
                         )
                     # bot.reply_to(message,'Region : {}\nLatest Version : {}\nAndroid Version : {}\nNumber of Pie Testing Regions : {}'.format(region,latestVersion[:16],str(outandroid),piecount))
                     # print("\nAndroid Version : " + str(outandroid)+"\n")
                 # bot.reply_to(message,'Region : {}\nLatest Version : {}'.format(region,latestVersion[:16]))
-                data.append(
-                    "--------------------------------------------------")
+                data.append("--------------------------------------------------")
             except IndexError:
                 gc.collect()
             outandroid = temp
-        data.append("<br/><b>Number of Pie Tests</b> : " +
-                    str(piecount) + "<br/>")
+        data.append("<br/><b>Number of Pie Tests</b> : " + str(piecount) + "<br/>")
         data = str(data)
         data = data.replace("['", "")
         data = data.replace(",", "")

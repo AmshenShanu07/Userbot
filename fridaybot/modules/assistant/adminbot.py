@@ -1,9 +1,5 @@
 from telethon import events, custom, Button
-from telethon.tl.types import (
-    Channel,
-    Chat,
-    User
-)
+from telethon.tl.types import Channel, Chat, User
 
 import emoji
 from googletrans import Translator
@@ -129,7 +125,9 @@ async def ban(event):
         if reply:
             pass
     except BadRequestError:
-        await event.reply("`I dont have message nuking rights! But still he was banned!`")
+        await event.reply(
+            "`I dont have message nuking rights! But still he was banned!`"
+        )
         return
     if reason:
         await event.reply(f"Banned `{str(user.id)}` \nReason: {reason}")
