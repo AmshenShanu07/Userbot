@@ -4,7 +4,6 @@ import requests
 
 from fridaybot.utils import friday_on_cmd, edit_or_reply, sudo_cmd
 
-
 @borg.on(friday_on_cmd("github (.*)"))
 @borg.on(sudo_cmd("github (.*)", allow_sudo=True))
 async def _(event):
