@@ -7,14 +7,17 @@ import subprocess
 import time
 
 from telethon import events
-from telethon.errors import (MessageEmptyError, MessageNotModifiedError,
-                             MessageTooLongError)
+from telethon.errors import MessageEmptyError
+from telethon.errors import MessageNotModifiedError
+from telethon.errors import MessageTooLongError
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 
-from fridaybot import CMD_HELP, bot
+from fridaybot import bot
+from fridaybot import CMD_HELP
 from fridaybot.events import register
-from fridaybot.utils import friday_on_cmd, sudo_cmd
+from fridaybot.utils import friday_on_cmd
+from fridaybot.utils import sudo_cmd
 
 try:
     import subprocess

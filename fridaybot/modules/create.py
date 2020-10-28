@@ -1,7 +1,6 @@
 """
 for bot credits to @pureindialover
 """
-
 from telethon.tl import functions
 
 from fridaybot import CMD_HELP

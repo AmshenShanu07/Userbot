@@ -1,6 +1,8 @@
-from sqlalchemy import Column, String
+from sqlalchemy import Column
+from sqlalchemy import String
 
-from fridaybot.modules.sql_helper import BASE, SESSION
+from fridaybot.modules.sql_helper import BASE
+from fridaybot.modules.sql_helper import SESSION
 
 
 class PMPermit(BASE):

@@ -3,8 +3,6 @@
 """Self Destruct Plugin
 .sd <time in seconds> <text>
 """
-
-
 import time
 
 from fridaybot.utils import friday_on_cmd

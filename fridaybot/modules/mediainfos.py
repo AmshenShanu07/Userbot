@@ -1,6 +1,5 @@
 # Originally By @DeletedUser420
 # Ported - @StarkxD
-
 import asyncio
 import html
 import os
@@ -10,12 +9,17 @@ import subprocess
 import time
 from datetime import datetime
 from os.path import basename
-from typing import List, Optional, Tuple
+from typing import List
+from typing import Optional
+from typing import Tuple
 
-from telegraph import Telegraph, exceptions, upload_file
+from telegraph import exceptions
+from telegraph import Telegraph
+from telegraph import upload_file
 
 from fridaybot.Configs import Config
-from fridaybot.utils import friday_on_cmd, sudo_cmd
+from fridaybot.utils import friday_on_cmd
+from fridaybot.utils import sudo_cmd
 
 telegraph = Telegraph()
 tgnoob = telegraph.create_account(short_name="Friday 🇮🇳")

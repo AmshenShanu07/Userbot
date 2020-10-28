@@ -1,6 +1,7 @@
 import sys
 
-from telethon import __version__, functions
+from telethon import __version__
+from telethon import functions
 
 from fridaybot.utils import friday_on_cmd
 

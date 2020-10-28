@@ -4,14 +4,21 @@ from re import sub
 from sys import setrecursionlimit
 from urllib import parse
 
-from pylast import User, WSError
+from pylast import User
+from pylast import WSError
 from telethon.errors import AboutTooLongError
 from telethon.errors.rpcerrorlist import FloodWaitError
 from telethon.tl.functions.account import UpdateProfileRequest
 from telethon.tl.functions.users import GetFullUserRequest
 
-from fridaybot import (BIO_PREFIX, BOTLOG, BOTLOG_CHATID, CMD_HELP,
-                       DEFAULT_BIO, LASTFM_USERNAME, bot, lastfm)
+from fridaybot import BIO_PREFIX
+from fridaybot import bot
+from fridaybot import BOTLOG
+from fridaybot import BOTLOG_CHATID
+from fridaybot import CMD_HELP
+from fridaybot import DEFAULT_BIO
+from fridaybot import lastfm
+from fridaybot import LASTFM_USERNAME
 from fridaybot.events import register
 
 # =================== CONSTANT ===================

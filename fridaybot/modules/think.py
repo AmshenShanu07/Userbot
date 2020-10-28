@@ -3,8 +3,6 @@
 Available Commands:
 
 .think"""
-
-
 import asyncio
 
 from fridaybot.utils import friday_on_cmd

@@ -3,12 +3,12 @@
 # UserBot Plugin To Send Fresh Proxies From Proxyscrape.com
 # Banned For Sensible Userbot And Users.
 # Usage : For Http Proxy : .proxyhttp , For Socks4 : .proxysocks4 , For socks5 : .proxysocks5
-
 import os
 
 from pySmartDL import SmartDL
 
-from fridaybot.utils import friday_on_cmd, sudo_cmd
+from fridaybot.utils import friday_on_cmd
+from fridaybot.utils import sudo_cmd
 
 STARK_HTTP = "https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all"
 HTTP_TXT = "**Proxy Info** \nType: __HTTPS__ \nTimeOut: __10000__ \nCountry: __All__ \nSsl: All \nAnonymity: __All__ \n[Click Here To View Or Download File Manually](https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=10000&country=all&ssl=all&anonymity=all) \nUploaded By [Friday](https://github.com/starkgang/FridayUserBot) \n**Here Is Your Proxy** 👇"

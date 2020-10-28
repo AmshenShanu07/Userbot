@@ -2,10 +2,11 @@ import os
 
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import scoped_session, sessionmaker
+from sqlalchemy.orm import scoped_session
+from sqlalchemy.orm import sessionmaker
 
-# the secret configuration specific things
 from var import Var
+# the secret configuration specific things
 
 
 def start() -> scoped_session:

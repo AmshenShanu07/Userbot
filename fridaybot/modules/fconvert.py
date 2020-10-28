@@ -1,12 +1,12 @@
 """File Converter
 .nfc """
-
 import asyncio
 import os
 import time
 from datetime import datetime
 
-from fridaybot.utils import friday_on_cmd, progress
+from fridaybot.utils import friday_on_cmd
+from fridaybot.utils import progress
 
 
 async def progress(current, total, event, start, type_of_ps, file_name=None):

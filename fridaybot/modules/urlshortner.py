@@ -3,7 +3,8 @@ import html
 import pyshorteners
 from pyshorteners import Shortener
 
-from fridaybot.utils import friday_on_cmd, sudo_cmd
+from fridaybot.utils import friday_on_cmd
+from fridaybot.utils import sudo_cmd
 
 
 @friday.on(friday_on_cmd(pattern="urlshort (.*)"))

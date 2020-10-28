@@ -2,8 +2,6 @@
 Available Commands:
 .support
 """
-
-
 import asyncio
 
 from fridaybot.utils import friday_on_cmd

@@ -9,8 +9,6 @@ Available Commands:
 .emoji :/
 
 .emoji -_-"""
-
-
 import asyncio
 
 from fridaybot.utils import friday_on_cmd

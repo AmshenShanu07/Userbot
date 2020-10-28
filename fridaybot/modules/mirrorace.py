@@ -1,7 +1,6 @@
 """Upload local Files to Mirrorace
 Syntax:
 .ma"""
-
 import asyncio
 import os
 import time
@@ -9,7 +8,8 @@ from datetime import datetime
 
 import aiohttp
 import requests
-from uniborg.util import friday_on_cmd, progress
+from uniborg.util import friday_on_cmd
+from uniborg.util import progress
 
 
 @friday.on(friday_on_cmd(pattern="ma ?(.*)", allow_sudo=True))

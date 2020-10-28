@@ -1,7 +1,6 @@
 # For UniBorg
 # By Priyam Kalra
 # Syntax (.hl <link>)
-
 from fridaybot.utils import friday_on_cmd
 
 

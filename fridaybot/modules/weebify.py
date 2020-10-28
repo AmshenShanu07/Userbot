@@ -3,7 +3,6 @@ Ported from Saitama Bot.
 By :- @PhycoNinja13b
 Modified by :- @kirito6969
 .weeb <text> """
-
 from uniborg.util import friday_on_cmd
 
 normiefont = [

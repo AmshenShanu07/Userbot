@@ -2,12 +2,14 @@
 #
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
-
 import os
 
 import requests
 
-from fridaybot import CMD_HELP, OCR_SPACE_API_KEY, TEMP_DOWNLOAD_DIRECTORY, bot
+from fridaybot import bot
+from fridaybot import CMD_HELP
+from fridaybot import OCR_SPACE_API_KEY
+from fridaybot import TEMP_DOWNLOAD_DIRECTORY
 from fridaybot.utils import register
 
 

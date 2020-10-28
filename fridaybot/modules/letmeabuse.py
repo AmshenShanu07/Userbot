@@ -1,8 +1,6 @@
 """command: .abusehin , .abusemal"""
-
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 import random
 
 from fridaybot.utils import friday_on_cmd

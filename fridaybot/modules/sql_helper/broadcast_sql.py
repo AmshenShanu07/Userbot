@@ -1,8 +1,9 @@
 # Credits : @HeisenbergTheDanger
+from sqlalchemy import Column
+from sqlalchemy import String
 
-from sqlalchemy import Column, String
-
-from fridaybot.modules.sql_helper import BASE, SESSION
+from fridaybot.modules.sql_helper import BASE
+from fridaybot.modules.sql_helper import SESSION
 
 
 class ghdb(BASE):

@@ -1,11 +1,10 @@
 """Type `.poto` for get **All profile pics of that User**
 \n Or type `.poto (number)` to get the **desired number of photo of a User** .
 """
-
-
 import logging
 
-from fridaybot.utils import friday_on_cmd, sudo_cmd
+from fridaybot.utils import friday_on_cmd
+from fridaybot.utils import sudo_cmd
 
 logger = logging.getLogger(__name__)
 

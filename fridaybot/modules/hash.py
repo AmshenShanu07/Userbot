@@ -4,14 +4,14 @@
 # you may not use this file except in compliance with the License.
 #
 """ Userbot module containing hash and encode/decode commands. """
-
 from subprocess import PIPE
 from subprocess import run as runapp
 
 import pybase64
 
 from fridaybot import CMD_HELP
-from fridaybot.events import errors_handler, register
+from fridaybot.events import errors_handler
+from fridaybot.events import register
 
 
 @register(outgoing=True, pattern="^.hash (.*)")
