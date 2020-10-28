@@ -38,9 +38,8 @@ def add_note(chat_id, keyword, reply):
 
 
 def rm_note(chat_id, keyword):
-    note = SESSION.query(Notes).filter(
-        Notes.chat_id == str(chat_id), Notes.keyword == keyword
-    )
+    note = SESSION.query(Notes).filter(Notes.chat_id == str(chat_id),
+                                       Notes.keyword == keyword)
     if note:
         note.delete()
         SESSION.commit()

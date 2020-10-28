@@ -8,7 +8,6 @@ from fridaybot.utils import sudo_cmd
 
 logger = logging.getLogger(__name__)
 
-
 if 1 == 1:
 
     name = "Profile Photos"
@@ -18,7 +17,6 @@ if 1 == 1:
     @friday.on(friday_on_cmd(pattern="poto(.*)"))
     @friday.on(sudo_cmd(pattern="poto(.*)", allow_sudo=True))
     async def potocmd(event):
-
         """Gets the profile photos of replied users, channels or chats"""
         id = "".join(event.raw_text.split(maxsplit=2)[1:])
 

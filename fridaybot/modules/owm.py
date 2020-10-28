@@ -41,7 +41,8 @@ async def get_weather(weather):
     """ For .weather command, gets the current weather of a city. """
 
     if not OWM_API:
-        await weather.edit("`Get an API key from` https://openweathermap.org/ `first.`")
+        await weather.edit(
+            "`Get an API key from` https://openweathermap.org/ `first.`")
         return
 
     APPID = OWM_API
@@ -49,15 +50,15 @@ async def get_weather(weather):
     if not weather.pattern_match.group(1):
         CITY = DEFCITY
         if not CITY:
-            await weather.edit("`Please specify a city or set one as default.`")
+            await weather.edit("`Please specify a city or set one as default.`"
+                               )
             return
     else:
         CITY = weather.pattern_match.group(1)
 
     timezone_countries = {
         timezone: country
-        for country, timezones in c_tz.items()
-        for timezone in timezones
+        for country, timezones in c_tz.items() for timezone in timezones
     }
 
     if "," in CITY:
@@ -123,19 +124,16 @@ async def get_weather(weather):
 
     await weather.edit(
         f"**Temperature:** `{celsius(curtemp)}°C | {fahrenheit(curtemp)}°F`\n"
-        + f"**Human Feeling** `{celsius(feel)}°C | {fahrenheit(feel)}°F`\n"
-        + f"**Min. Temp.:** `{celsius(min_temp)}°C | {fahrenheit(min_temp)}°F`\n"
-        + f"**Max. Temp.:** `{celsius(max_temp)}°C | {fahrenheit(max_temp)}°F`\n"
-        + f"**Humidity:** `{humidity}%`\n"
-        + f"**Pressure** `{pressure} hPa`\n"
-        + f"**Wind:** `{kmph[0]} kmh | {mph[0]} mph, {findir}`\n"
-        + f"**Cloud:** `{cloud} %`\n"
-        + f"**Sunrise:** `{sun(sunrise)}`\n"
-        + f"**Sunset:** `{sun(sunset)}`\n\n\n"
-        + f"**{desc}**\n"
-        + f"`{cityname}, {fullc_n}`\n"
-        + f"`{time}`\n"
-    )
+        + f"**Human Feeling** `{celsius(feel)}°C | {fahrenheit(feel)}°F`\n" +
+        f"**Min. Temp.:** `{celsius(min_temp)}°C | {fahrenheit(min_temp)}°F`\n"
+        +
+        f"**Max. Temp.:** `{celsius(max_temp)}°C | {fahrenheit(max_temp)}°F`\n"
+        + f"**Humidity:** `{humidity}%`\n" +
+        f"**Pressure** `{pressure} hPa`\n" +
+        f"**Wind:** `{kmph[0]} kmh | {mph[0]} mph, {findir}`\n" +
+        f"**Cloud:** `{cloud} %`\n" + f"**Sunrise:** `{sun(sunrise)}`\n" +
+        f"**Sunset:** `{sun(sunset)}`\n\n\n" + f"**{desc}**\n" +
+        f"`{cityname}, {fullc_n}`\n" + f"`{time}`\n")
 
 
 @register(outgoing=True, pattern="^.setcity(?: |$)(.*)")
@@ -144,7 +142,8 @@ async def set_default_city(city):
     """ For .ctime command, change the default fridaybot country for date and time commands. """
 
     if not OWM_API:
-        await city.edit("`Get an API key from` https://openweathermap.org/ `first.`")
+        await city.edit(
+            "`Get an API key from` https://openweathermap.org/ `first.`")
         return
 
     global DEFCITY
@@ -160,8 +159,7 @@ async def set_default_city(city):
 
     timezone_countries = {
         timezone: country
-        for country, timezones in c_tz.items()
-        for timezone in timezones
+        for country, timezones in c_tz.items() for timezone in timezones
     }
 
     if "," in CITY:
@@ -194,11 +192,10 @@ async def set_default_city(city):
     await city.edit(f"`Set default city as {cityname}, {fullc_n}.`")
 
 
-CMD_HELP.update(
-    {
-        "weather": ".weather <city> or .weather <city>, <country name/code>\
+CMD_HELP.update({
+    "weather":
+    ".weather <city> or .weather <city>, <country name/code>\
     \nUsage: Gets the weather of a city.\n\
     \n.setcity <city> or .setcity <city>, <country name/code>\
     \nUsage: Sets your default city so you can just use .weather."
-    }
-)
+})
