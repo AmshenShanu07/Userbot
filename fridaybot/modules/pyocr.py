@@ -2,11 +2,14 @@ try:
     from PIL import Image
 except ImportError:
     import Image
-import pytesseract
-import os
-from fridaybot.utils import friday_on_cmd, sudo_cmd
-from fridaybot.Configs import Config
+
 import html
+import os
+
+import pytesseract
+
+from fridaybot.Configs import Config
+from fridaybot.utils import friday_on_cmd, sudo_cmd
 
 
 @friday.on(friday_on_cmd(pattern="read$"))

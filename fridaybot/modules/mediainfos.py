@@ -2,20 +2,20 @@
 # Ported - @StarkxD
 
 import asyncio
-import os
-import time
-from datetime import datetime
-from fridaybot.Configs import Config
-from fridaybot.utils import friday_on_cmd, sudo_cmd
-import subprocess
+import html
 import os
 import re
-import html
 import shlex
-import asyncio
+import subprocess
+import time
+from datetime import datetime
 from os.path import basename
-from typing import Tuple, List, Optional
+from typing import List, Optional, Tuple
+
 from telegraph import Telegraph, exceptions, upload_file
+
+from fridaybot.Configs import Config
+from fridaybot.utils import friday_on_cmd, sudo_cmd
 
 telegraph = Telegraph()
 tgnoob = telegraph.create_account(short_name="Friday 🇮🇳")

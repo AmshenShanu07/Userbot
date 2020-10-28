@@ -1,10 +1,12 @@
-from youtubesearchpython import SearchVideos
-from pytube import YouTube
-import os
-import wget
-from fridaybot.Configs import Config
 import asyncio
-from fridaybot.utils import sudo_cmd, friday_on_cmd, edit_or_reply
+import os
+
+import wget
+from pytube import YouTube
+from youtubesearchpython import SearchVideos
+
+from fridaybot.Configs import Config
+from fridaybot.utils import edit_or_reply, friday_on_cmd, sudo_cmd
 
 
 @friday.on(friday_on_cmd(pattern="ytmusic ?(.*)"))

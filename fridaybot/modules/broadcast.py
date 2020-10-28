@@ -15,15 +15,14 @@
 
 
 import asyncio
-from telethon.tl.types import InputMediaUploadedPhoto
-from uniborg.util import friday_on_cmd, edit_or_reply, sudo_cmd
 
-from fridaybot.modules.sql_helper.broadcast_sql import (
-    add_channel,
-    get_all_channels,
-    in_channels,
-    rm_channel,
-)
+from telethon.tl.types import InputMediaUploadedPhoto
+from uniborg.util import edit_or_reply, friday_on_cmd, sudo_cmd
+
+from fridaybot.modules.sql_helper.broadcast_sql import (add_channel,
+                                                        get_all_channels,
+                                                        in_channels,
+                                                        rm_channel)
 from var import Var
 
 logs_id = Var.PRIVATE_GROUP_ID

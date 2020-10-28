@@ -5,8 +5,9 @@ DB Options: bots, commands, email, forward, url"""
 
 from telethon import events, functions, types
 
-from fridaybot.modules.sql_helper.locks_sql import get_locks, is_locked, update_lock
-from fridaybot.utils import friday_on_cmd, edit_or_reply, sudo_cmd
+from fridaybot.modules.sql_helper.locks_sql import (get_locks, is_locked,
+                                                    update_lock)
+from fridaybot.utils import edit_or_reply, friday_on_cmd, sudo_cmd
 
 
 @friday.on(friday_on_cmd("lock( (?P<target>\S+)|$)"))

@@ -2,11 +2,11 @@
 Available Commands:
 .hack"""
 
-from telethon import events
-
 import asyncio
-from uniborg.util import friday_on_cmd
+
+from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest
+from uniborg.util import friday_on_cmd
 
 
 @friday.on(friday_on_cmd(pattern=r"hack"))

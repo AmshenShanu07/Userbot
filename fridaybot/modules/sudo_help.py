@@ -1,5 +1,5 @@
 from fridaybot import SUDO_LIST
-from fridaybot.utils import sudo_cmd, edit_or_reply
+from fridaybot.utils import edit_or_reply, sudo_cmd
 
 
 @friday.on(sudo_cmd(pattern="help ?(.*)", allow_sudo=True))

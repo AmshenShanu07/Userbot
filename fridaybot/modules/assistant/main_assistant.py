@@ -11,41 +11,33 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-from telethon import events, custom, Button
-from telethon.tl.types import Channel, Chat, User
+import asyncio
+import io
+import re
+import time
+from datetime import datetime
+from math import ceil
 
 import emoji
-import asyncio
 from googletrans import Translator
-import re
-import io
-from math import ceil
-from fridaybot.modules import inlinestats
-from telethon import custom, events, Button
-from fridaybot import CMD_LIST
-from fridaybot.utils import friday_on_cmd, edit_or_reply, sudo_cmd
-from telethon.utils import get_display_name
-from fridaybot.utils import friday_on_cmd, sudo_cmd
-from fridaybot.Configs import Config
-from telethon import events
-from datetime import datetime
-from fridaybot.utils import friday_on_cmd, edit_or_reply, sudo_cmd
-import time
+from telethon import Button, custom, events
 from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
-from fridaybot import Lastupdate, bot
+from telethon.tl.types import Channel, Chat, User
+from telethon.utils import get_display_name
+
+from fridaybot import CMD_LIST, Lastupdate, bot
+from fridaybot.Configs import Config
+from fridaybot.modules import inlinestats
+from fridaybot.modules.sql_helper.blacklist_assistant import (add_nibba_in_db,
+                                                              get_all_nibba,
+                                                              is_he_added,
+                                                              removenibba)
 from fridaybot.modules.sql_helper.botusers_sql import add_me_in_db, his_userid
-from fridaybot.modules.sql_helper.idadder_sql import (
-    add_usersid_in_db,
-    get_all_users,
-    already_added,
-)
-from fridaybot.modules.sql_helper.blacklist_assistant import (
-    add_nibba_in_db,
-    get_all_nibba,
-    is_he_added,
-    removenibba,
-)
+from fridaybot.modules.sql_helper.idadder_sql import (add_usersid_in_db,
+                                                      already_added,
+                                                      get_all_users)
+from fridaybot.utils import edit_or_reply, friday_on_cmd, sudo_cmd
 
 
 @tgbot.on(events.NewMessage(pattern="^/start"))

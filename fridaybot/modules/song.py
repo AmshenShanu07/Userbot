@@ -1,25 +1,25 @@
-from telethon import events
-import subprocess
-from telethon.errors import (
-    MessageEmptyError,
-    MessageTooLongError,
-    MessageNotModifiedError,
-)
-import io
 import asyncio
 import datetime
+import glob
+import io
+import os
+import subprocess
 import time
-from fridaybot.utils import friday_on_cmd, sudo_cmd
-from fridaybot.events import register
-from fridaybot import bot, CMD_HELP
+
+from telethon import events
+from telethon.errors import (MessageEmptyError, MessageNotModifiedError,
+                             MessageTooLongError)
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-import glob
-import os
+
+from fridaybot import CMD_HELP, bot
+from fridaybot.events import register
+from fridaybot.utils import friday_on_cmd, sudo_cmd
 
 try:
-    import instantmusic
     import subprocess
+
+    import instantmusic
 except:
     os.system("pip install instantmusic")
 

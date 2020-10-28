@@ -1,28 +1,18 @@
-from telethon import events, utils
-from telethon.tl import types
-from telethon import events, custom, Button
-from telethon.tl.types import Channel, Chat, User
+import time
+from datetime import datetime
 
 import emoji
 from googletrans import Translator
-from fridaybot.utils import friday_on_cmd, edit_or_reply, sudo_cmd
+from telethon import Button, custom, events, utils
+from telethon.tl import types
+from telethon.tl.types import Channel, Chat, User
 from telethon.utils import get_display_name
-from fridaybot.utils import friday_on_cmd, sudo_cmd
-from fridaybot.Configs import Config
-from telethon import events
-from datetime import datetime
-from fridaybot.utils import friday_on_cmd, edit_or_reply, sudo_cmd
-import time
+
 from fridaybot import Lastupdate, bot
-
-
-from fridaybot.modules.sql_helper.snips_sql import (
-    add_snip,
-    get_all_snips,
-    get_snips,
-    remove_snip,
-)
-from fridaybot.utils import friday_on_cmd
+from fridaybot.Configs import Config
+from fridaybot.modules.sql_helper.snips_sql import (add_snip, get_all_snips,
+                                                    get_snips, remove_snip)
+from fridaybot.utils import edit_or_reply, friday_on_cmd, sudo_cmd
 
 TYPE_TEXT = 0
 TYPE_PHOTO = 1

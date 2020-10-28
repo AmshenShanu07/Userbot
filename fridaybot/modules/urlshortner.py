@@ -1,6 +1,8 @@
+import html
+
 import pyshorteners
 from pyshorteners import Shortener
-import html
+
 from fridaybot.utils import friday_on_cmd, sudo_cmd
 
 

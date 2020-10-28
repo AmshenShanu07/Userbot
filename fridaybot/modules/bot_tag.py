@@ -12,11 +12,12 @@
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 
-from telethon import events, custom, Button
+from telethon import Button, custom, events
 from telethon.tl.types import Channel, Chat, User
 from telethon.utils import get_display_name
-from fridaybot.utils import friday_on_cmd, sudo_cmd, edit_or_reply
+
 from fridaybot.Configs import Config
+from fridaybot.utils import edit_or_reply, friday_on_cmd, sudo_cmd
 
 
 @friday.on(

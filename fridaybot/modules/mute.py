@@ -12,10 +12,11 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-import fridaybot.modules.sql_helper.pmpermit_sql as pmpermit_sql
-from telethon import events
 import asyncio
 
+from telethon import events
+
+import fridaybot.modules.sql_helper.pmpermit_sql as pmpermit_sql
 from fridaybot.modules.sql_helper.mute_sql import is_muted, mute, unmute
 
 

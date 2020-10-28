@@ -1,8 +1,7 @@
 from fridaybot import topfunc
+from fridaybot.Configs import Config
 from fridaybot.utils import friday_on_cmd
 from var import Var
-from fridaybot.Configs import Config
-
 
 idgen = topfunc.id_generator
 findnemo = topfunc.stark_finder
