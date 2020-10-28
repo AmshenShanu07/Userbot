@@ -1,5 +1,7 @@
 ## FRIDAY USERBOT
+
 # EXAMPLE CODE !
+
 ```python3
 from fridaybot.utils import friday_on_cmd, sudo_cmd, edit_or_reply
 from fridaybot.Configs import Config
