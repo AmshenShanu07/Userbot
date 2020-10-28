@@ -22,6 +22,7 @@ from telethon.utils import get_display_name
 from fridaybot.utils import friday_on_cmd, sudo_cmd, edit_or_reply
 from fridaybot.Configs import Config
 
+
 @friday.on(events.NewMessage(
     incoming=True,
     blacklist_chats=Config.UB_BLACK_LIST_CHAT,
@@ -73,4 +74,3 @@ async def all_messages_catcher(event):
             [custom.Button.url(button_text, message_link)]
         ]
     )
-

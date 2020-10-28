@@ -10,7 +10,7 @@ from fridaybot.utils import friday_on_cmd, sudo_cmd
 import subprocess
 import os
 import re
-import html 
+import html
 import shlex
 import asyncio
 from os.path import basename
@@ -18,6 +18,7 @@ from typing import Tuple, List, Optional
 from telegraph import Telegraph, exceptions, upload_file
 telegraph = Telegraph()
 tgnoob = telegraph.create_account(short_name="Friday 🇮🇳")
+
 
 async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
     """ run command in terminal """
@@ -30,6 +31,7 @@ async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
             stderr.decode('utf-8', 'replace').strip(),
             process.returncode,
             process.pid)
+
 
 @friday.on(friday_on_cmd(pattern="mediainfo$"))  # pylint:disable=E0602
 async def _(event):
@@ -52,4 +54,4 @@ async def _(event):
     km = response["path"]
     await event.edit(f"`This MediaInfo Can Be Found` [Here](https://telegra.ph/{km})")
     if os.path.exists(file_path):
-            os.remove(file_path)
+        os.remove(file_path)

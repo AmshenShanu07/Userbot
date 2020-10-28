@@ -1,4 +1,5 @@
 """.admin Plugin for @UniBorg"""
+from uniborg.util import friday_on_cmd
 from telethon.tl.types import ChannelParticipantsAdmins
 
 from fridaybot.utils import friday_on_cmd
@@ -24,8 +25,6 @@ async def _(event):
 
 
 """.admin Plugin for @UniBorg"""
-from telethon.tl.types import ChannelParticipantsAdmins
-from uniborg.util import friday_on_cmd
 
 
 @friday.on(friday_on_cmd("warn2"))
@@ -48,8 +47,6 @@ async def _(event):
 
 
 """.admin Plugin for @UniBorg"""
-from telethon.tl.types import ChannelParticipantsAdmins
-from uniborg.util import friday_on_cmd
 
 
 @friday.on(friday_on_cmd("warn3"))
@@ -70,8 +67,6 @@ async def _(event):
 
 
 """.admin Plugin for @UniBorg"""
-from telethon.tl.types import ChannelParticipantsAdmins
-from uniborg.util import friday_on_cmd
 
 
 @friday.on(friday_on_cmd("warn0"))
@@ -92,8 +87,6 @@ async def _(event):
 
 
 """.admin Plugin for @UniBorg"""
-from telethon.tl.types import ChannelParticipantsAdmins
-from uniborg.util import friday_on_cmd
 
 
 @friday.on(friday_on_cmd("ocb"))

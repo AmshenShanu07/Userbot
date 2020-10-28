@@ -49,7 +49,8 @@ async def _(event):
             ms = (end - start).seconds
             required_file_name = downloaded_file_name
             await mone.edit(
-                "Downloaded to `{}` in {} seconds.".format(downloaded_file_name, ms)
+                "Downloaded to `{}` in {} seconds.".format(
+                    downloaded_file_name, ms)
             )
     elif input_str:
         input_str = input_str.strip()
@@ -93,7 +94,8 @@ async def _(event):
                     url = step_one_response_text["result"]["url"]
                     await mone.edit(f"Start Uploading to {url}")
                     start = datetime.now()
-                    files = {"file1": (file_name, open(required_file_name, "rb"))}
+                    files = {"file1": (file_name, open(
+                        required_file_name, "rb"))}
                     resp = requests.post(url, files=files)
                     step_two_response_text = resp.json()
                     # logger.info(step_two_response_text)

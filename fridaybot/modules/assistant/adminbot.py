@@ -127,7 +127,7 @@ async def ban(event):
     try:
         reply = await event.get_reply_message()
         if reply:
-             pass
+            pass
     except BadRequestError:
         await event.reply("`I dont have message nuking rights! But still he was banned!`")
         return
@@ -166,7 +166,6 @@ async def nothanos(event):
     except BadRequestError:
         await event.reply("`No Permission 🤭`")
         return
-
 
 
 @tgbot.on(events.NewMessage(pattern="^/prumote(?: |$)(.*)"))
@@ -266,6 +265,7 @@ async def demote(event):
         return
     await event.reply("`Demoted this retard Successfully!`")
 
+
 @tgbot.on(events.NewMessage(pattern="^/pin(?: |$)(.*)"))
 async def pin(event):
     userids = []
@@ -305,6 +305,7 @@ async def pin(event):
         return
     await event.reply("`Pinned Successfully!`")
     user = await get_user_from_id(msg.from_id, msg)
+
 
 async def get_user_from_event(event):
     """ Get the user from argument or replied message. """

@@ -3,6 +3,7 @@ from fridaybot.utils import friday_on_cmd, edit_or_reply, sudo_cmd
 import time
 from fridaybot import Lastupdate
 
+
 def get_readable_time(seconds: int) -> str:
     count = 0
     ping_time = ""
@@ -29,6 +30,7 @@ def get_readable_time(seconds: int) -> str:
     ping_time += ":".join(time_list)
 
     return ping_time
+
 
 @friday.on(friday_on_cmd(pattern="ping$"))
 @friday.on(sudo_cmd(pattern="ping$", allow_sudo=True))

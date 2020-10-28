@@ -29,7 +29,8 @@ async def imdb(e):
         odds = soup.findAll("tr", "odd")
         mov_title = odds[0].findNext("td").findNext("td").text
         mov_link = (
-            "http://www.imdb.com/" + odds[0].findNext("td").findNext("td").a["href"]
+            "http://www.imdb.com/" +
+            odds[0].findNext("td").findNext("td").a["href"]
         )
         page1 = requests.get(mov_link)
         soup = bs4.BeautifulSoup(page1.content, "lxml")
@@ -64,7 +65,8 @@ async def imdb(e):
             actors.pop()
             stars = actors[0] + "," + actors[1] + "," + actors[2]
         if soup.find("div", "inline canwrap"):
-            story_line = soup.find("div", "inline canwrap").findAll("p")[0].text
+            story_line = soup.find(
+                "div", "inline canwrap").findAll("p")[0].text
         else:
             story_line = "Not available"
         info = soup.findAll("div", "txt-block")

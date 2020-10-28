@@ -94,4 +94,3 @@ async def drawText(image_path, text):
     webp_file = os.path.join(Var.TEMP_DOWNLOAD_DIRECTORY, image_name)
     img.save(webp_file, "webp")
     return webp_file
-

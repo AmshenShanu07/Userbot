@@ -1,3 +1,10 @@
+from fridaybot import bot
+from time import gmtime, strftime
+import traceback
+import sys
+import math
+import datetime
+import asyncio
 import inspect
 import logging
 import re
@@ -10,6 +17,7 @@ from fridaybot.Configs import Config
 from var import Var
 
 cmdhandler = Config.COMMAND_HAND_LER
+
 
 def command(**args):
     args["func"] = lambda e: e.via_bot_id is None
@@ -41,7 +49,8 @@ def command(**args):
                 cmd = re.search(reg, pattern)
                 try:
                     cmd = (
-                        cmd.group(1).replace("$", "").replace("\\", "").replace("^", "")
+                        cmd.group(1).replace("$", "").replace(
+                            "\\", "").replace("^", "")
                     )
                 except:
                     pass
@@ -142,6 +151,7 @@ def remove_plugin(shortname):
     except:
         raise ValueError
 
+
 def admin_cmd(pattern=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
 
@@ -184,7 +194,6 @@ def admin_cmd(pattern=None, **args):
     # check if the plugin should listen for outgoing 'messages'
 
     return events.NewMessage(**args)
-
 
 
 def friday_on_cmd(pattern=None, **args):
@@ -234,17 +243,6 @@ def friday_on_cmd(pattern=None, **args):
 """ Userbot module for managing events.
  One of the main components of the fridaybot. """
 
-import asyncio
-import datetime
-import math
-import sys
-import traceback
-from time import gmtime, strftime
-
-from telethon import events
-
-from fridaybot import bot
-
 
 def register(**args):
     """ Register a new event. """
@@ -268,7 +266,8 @@ def register(**args):
         try:
             cmd = re.search(reg, pattern)
             try:
-                cmd = cmd.group(1).replace("$", "").replace("\\", "").replace("^", "")
+                cmd = cmd.group(1).replace("$", "").replace(
+                    "\\", "").replace("^", "")
             except:
                 pass
 
@@ -300,7 +299,8 @@ def errors_handler(func):
         except BaseException:
 
             date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
-            new = {"error": str(sys.exc_info()[1]), "date": datetime.datetime.now()}
+            new = {"error": str(
+                sys.exc_info()[1]), "date": datetime.datetime.now()}
 
             text = "**USERBOT CRASH REPORT**\n\n"
 
@@ -335,7 +335,8 @@ def errors_handler(func):
                 command, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
             )
             stdout, stderr = await process.communicate()
-            result = str(stdout.decode().strip()) + str(stderr.decode().strip())
+            result = str(stdout.decode().strip()) + \
+                str(stderr.decode().strip())
 
             ftext += result
 
@@ -359,7 +360,8 @@ async def progress(current, total, event, start, type_of_ps, file_name=None):
             round(percentage, 2),
         )
         tmp = progress_str + "{0} of {1}\nETA: {2}".format(
-            humanbytes(current), humanbytes(total), time_formatter(estimated_total_time)
+            humanbytes(current), humanbytes(
+                total), time_formatter(estimated_total_time)
         )
         if file_name:
             await event.edit(
@@ -421,9 +423,11 @@ def sudo_cmd(pattern=None, **args):
             # special fix for snip.py
             args["pattern"] = re.compile(pattern)
         else:
-            args["pattern"] = re.compile(Config.SUDO_COMMAND_HAND_LER + pattern)
+            args["pattern"] = re.compile(
+                Config.SUDO_COMMAND_HAND_LER + pattern)
             reg = Config.SUDO_COMMAND_HAND_LER[1]
-            cmd = (reg + pattern).replace("$", "").replace("\\", "").replace("^", "")
+            cmd = (reg + pattern).replace("$",
+                                          "").replace("\\", "").replace("^", "")
             try:
                 SUDO_LIST[file_test].append(cmd)
             except:
@@ -460,10 +464,7 @@ async def edit_or_reply(event, text):
     return await event.edit(text)
 
 
-
-
-
-# Assistant 
+# Assistant
 def start_assistant(shortname):
     if shortname.startswith("__"):
         pass

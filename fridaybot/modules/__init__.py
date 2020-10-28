@@ -1,6 +1,6 @@
 from fridaybot import topfunc
 from fridaybot.utils import friday_on_cmd
-from var import Var 
+from var import Var
 from fridaybot.Configs import Config
 
 

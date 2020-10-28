@@ -64,9 +64,6 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-import asyncio
-
-
 @friday.on(friday_on_cmd(pattern=r"sexy"))
 async def _(event):
 

@@ -50,7 +50,8 @@ async def _(event):
                 transcript_confidence = ""
                 for alternative in results:
                     alternatives = alternative["alternatives"][0]
-                    transcript_response += " " + str(alternatives["transcript"]) + " + "
+                    transcript_response += " " + \
+                        str(alternatives["transcript"]) + " + "
                     transcript_confidence += (
                         " " + str(alternatives["confidence"]) + " + "
                     )

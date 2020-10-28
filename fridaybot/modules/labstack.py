@@ -63,7 +63,8 @@ async def labstack(event):
     ]
     try:
         logger.info(command_to_exec)
-        t_response = subprocess.check_output(command_to_exec, stderr=subprocess.STDOUT)
+        t_response = subprocess.check_output(
+            command_to_exec, stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as exc:
         logger.info("Status : FAIL", exc.returncode, exc.output)
         await event.edit(exc.output.decode("UTF-8"))

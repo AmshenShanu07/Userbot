@@ -8,7 +8,9 @@ from datetime import datetime
 from fridaybot import Lastupdate
 from fridaybot.modules import currentversion
 
-#Functions
+# Functions
+
+
 def get_readable_time(seconds: int) -> str:
     count = 0
     ping_time = ""
@@ -35,6 +37,7 @@ def get_readable_time(seconds: int) -> str:
     ping_time += ":".join(time_list)
 
     return ping_time
+
 
 uptime = get_readable_time((time.time() - Lastupdate))
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"

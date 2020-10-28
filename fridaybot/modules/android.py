@@ -97,7 +97,8 @@ async def codename_info(request):
             "certified-android-devices/master/by_brand.json"
         ).text
     )
-    devices_lower = {k.lower(): v for k, v in data.items()}  # Lower brand names in JSON
+    devices_lower = {k.lower(): v for k, v in data.items()
+                     }  # Lower brand names in JSON
     devices = devices_lower.get(brand)
     results = [
         i

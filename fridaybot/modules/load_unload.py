@@ -5,7 +5,6 @@ from datetime import datetime
 from pathlib import Path
 
 
-
 @friday.on(friday_on_cmd(pattern="load ?(.*)", outgoing=True))
 async def load(event):
     if event.fwd_from:
@@ -22,6 +21,7 @@ async def load(event):
         await event.edit(
             f"Could not load {shortname} because of the following error.\n{str(e)}"
         )
+
 
 @friday.on(friday_on_cmd(pattern="unload ?(.*)", outgoing=True))
 async def unload(event):

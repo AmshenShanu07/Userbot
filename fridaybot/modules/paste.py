@@ -63,7 +63,8 @@ async def _(event):
         py_file += ".py"
         data = message
         key = (
-            requests.post("https://nekobin.com/api/documents", json={"content": data})
+            requests.post("https://nekobin.com/api/documents",
+                          json={"content": data})
             .json()
             .get("result")
             .get("key")
@@ -75,7 +76,8 @@ async def _(event):
     else:
         data = message
         key = (
-            requests.post("https://nekobin.com/api/documents", json={"content": data})
+            requests.post("https://nekobin.com/api/documents",
+                          json={"content": data})
             .json()
             .get("result")
             .get("key")

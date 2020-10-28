@@ -1,7 +1,7 @@
-# Copyright (C) Midhun KM 
-# 
+# Copyright (C) Midhun KM
+#
 # Please Don't Kang Without Credits
-# A Plugin For Assistant Bot 
+# A Plugin For Assistant Bot
 # x0x
 
 from telethon import events, custom, Button
@@ -18,11 +18,12 @@ from telethon.utils import get_display_name
 from fridaybot.utils import friday_on_cmd, sudo_cmd
 from fridaybot.Configs import Config
 from telethon import events
-from fridaybot import bot 
+from fridaybot import bot
 from datetime import datetime
 from fridaybot.utils import friday_on_cmd, edit_or_reply, sudo_cmd
 import time
 from fridaybot import Lastupdate
+
 
 @tgbot.on(events.NewMessage(pattern="^/tr ?(.*)"))
 async def _(event):

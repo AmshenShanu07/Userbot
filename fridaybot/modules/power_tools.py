@@ -34,4 +34,3 @@ async def _(event):
         return
     await event.edit("Turning off ...Manually turn me on later")
     await borg.disconnect()
-

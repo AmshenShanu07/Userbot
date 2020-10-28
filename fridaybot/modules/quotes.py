@@ -20,7 +20,8 @@ async def quote_search(event):
         response = None
     if response is not None:
         result = (
-            random.choice(response).get("input_message_content").get("message_text")
+            random.choice(response).get(
+                "input_message_content").get("message_text")
         )
     else:
         result = None

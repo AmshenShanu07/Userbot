@@ -26,7 +26,8 @@ async def _(event):
         a = ""
         if "error" not in response_content:
             current_date_detail_arraays = response_content["months"][0]["days"][0]
-            a = json.dumps(current_date_detail_arraays, sort_keys=True, indent=4)
+            a = json.dumps(current_date_detail_arraays,
+                           sort_keys=True, indent=4)
         else:
             a = response_content["error"]
         await event.edit(str(a))

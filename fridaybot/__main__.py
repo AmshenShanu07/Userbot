@@ -1,3 +1,4 @@
+import glob
 from pathlib import Path
 from sys import argv
 
@@ -33,7 +34,6 @@ else:
         bot.start()
 
 
-import glob
 path = "fridaybot/modules/*.py"
 files = glob.glob(path)
 for name in files:

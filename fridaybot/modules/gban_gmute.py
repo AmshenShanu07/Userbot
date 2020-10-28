@@ -8,7 +8,8 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 from telethon.events import ChatAction
 
-async def get_full_user(event):  
+
+async def get_full_user(event):
     args = event.pattern_match.group(1).split(':', 1)
     extra = None
     if event.reply_to_msg_id and not len(args) == 2:
@@ -34,7 +35,7 @@ async def get_full_user(event):
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("Something Went Wrong", str(err))           
+            return await event.edit("Something Went Wrong", str(err))
     return user_obj, extra
 
 
@@ -47,6 +48,7 @@ async def get_user_from_id(user, event):
         await event.edit(str(err))
         return None
     return user_obj
+
 
 @friday.on(friday_on_cmd(pattern="gban ?(.*)"))
 async def gspider(fridaybot):
@@ -178,30 +180,28 @@ async def gspider(fridaybot):
     )
 
 
-
-
 @friday.on(ChatAction)
-async def handler(rkG): 
-   if rkG.user_joined or rkG.user_added:      
-       try:       	
-         from fridaybot.modules.sql_helper.gmute_sql import is_gmuted
-         guser = await rkG.get_user()      
-         gmuted = is_gmuted(guser.id)             
-       except:      
-          return
-       if gmuted:
-        for i in gmuted:
-            if i.sender == str(guser.id):                                                                         
-                chat = await rkG.get_chat()
-                admin = chat.admin_rights
-                creator = chat.creator   
-                if admin or creator:
-                 try:
-                    await client.edit_permissions(rkG.chat_id, guser.id, view_messages=False)                              
-                    await rkG.reply(
-                     f"**Gbanned User Joined!!** \n"                      
-                     f"**Victim Id**: [{guser.id}](tg://user?id={guser.id})\n"                   
-                     f"**Action **  : `Banned`")                                                
-                 except:       
-                    rkG.reply("`No Permission To Ban`")                   
-                    return 
+async def handler(rkG):
+    if rkG.user_joined or rkG.user_added:
+        try:
+            from fridaybot.modules.sql_helper.gmute_sql import is_gmuted
+            guser = await rkG.get_user()
+            gmuted = is_gmuted(guser.id)
+        except:
+            return
+        if gmuted:
+            for i in gmuted:
+                if i.sender == str(guser.id):
+                    chat = await rkG.get_chat()
+                    admin = chat.admin_rights
+                    creator = chat.creator
+                    if admin or creator:
+                        try:
+                            await client.edit_permissions(rkG.chat_id, guser.id, view_messages=False)
+                            await rkG.reply(
+                                f"**Gbanned User Joined!!** \n"
+                                f"**Victim Id**: [{guser.id}](tg://user?id={guser.id})\n"
+                                f"**Action **  : `Banned`")
+                        except:
+                            rkG.reply("`No Permission To Ban`")
+                            return
