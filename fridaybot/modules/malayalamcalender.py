@@ -1,4 +1,4 @@
-"""Malayalam Calendar plugin for Indian Bot 
+"""Malayalam Calendar plugin for Indian Bot
 SYNTAX: .calendar YYYY-MM-DD"""
 import json
 from datetime import datetime

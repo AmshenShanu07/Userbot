@@ -1,5 +1,5 @@
 """
-command: .singer singer name - song name 
+command: .singer singer name - song name
 by @quiec
 """
 from PyLyrics import *

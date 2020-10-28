@@ -1,7 +1,7 @@
 """
 Check Current Beta firmwares of Samsung Devices
 Syntax: .check androidVersion modelNumber
-By :- Jaskaran ^_^ 
+By :- Jaskaran ^_^
 Telegram :- @Zero_cool7870
 
 """
